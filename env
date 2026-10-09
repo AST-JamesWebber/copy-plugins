@@ -1,0 +1,7 @@
+payment_plugin_destination="/mnt/c/plugins"
+comms_plugin_destination="/mnt/c/plugins"
+import_plugin_destination="/mnt/c/plugins"
+
+payment_plugins=("Adumo" "BarclaycardFuse" "Flywire" "GlobalPayments" "Moneris" "Pay360" "PayPal" "PayU" "SagePay" "SkipPayment" "Stripe" "TrustPayments" "WPM")
+comms_plugins=("SMTP")
+import_plugins=("Creatio")
