@@ -59,13 +59,14 @@ for destination in "$payment_plugin_destination" "$comms_plugin_destination" "$i
     fi
 done
 
-# route should be dc-web-beta if version is less than 2.5 and dc-web-alpha otherwise
 route=""
 major="${version%%.*}"
 minor="${version#*.}"
 minor="${minor%%.*}"
 
-if (( major < 2 || ( major == 2 && minor < 5 ) )); then
+if [[ "$version" != *-* ]]; then
+    route="dc-web"
+elif (( major < 2 || ( major == 2 && minor < 5 ) )); then
 	route="dc-web-beta"
 else
 	route="dc-web-alpha"

@@ -39,6 +39,6 @@ Add `-v` or `--verbose` to show curl's verbose output:
 ./copy-plugins.sh --verbose 2.6.0-alpha.187
 ```
 
-The required version must be `major.minor.patch`, optionally followed by `-alpha.N`, `-beta.N`, or `-rc.N`. Numeric components cannot have leading zeroes, and the prerelease number must be between 0 and 999. Versions below `2.5` use the `dc-web-beta` download route; versions `2.5` and later use `dc-web-alpha`.
+The required version must be `major.minor.patch`, optionally followed by `-alpha.N`, `-beta.N`, or `-rc.N`. Numeric components cannot have leading zeroes, and the prerelease number must be between 0 and 999. Stable versions (without a prerelease suffix) use the `dc-web` download route. Prerelease versions below `2.5` use `dc-web-beta`; prerelease versions `2.5` and later use `dc-web-alpha`.
 
 By default, the script prints one completion line per successful plugin. Failures are logged, processing continues for the remaining plugins, and the script exits with status 1 if any plugin failed.
